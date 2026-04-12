@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
-const INDEX = 'v1.html';
+const INDEX = 'index.html';
 const PORT = Number(process.env.PORT) || 3000;
 
 const MIME = {

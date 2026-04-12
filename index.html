@@ -3,59 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FI.WAV — Press Kit | Vibranium Records</title>
+  <title>TIESTO — Press Kit | Tiesto Records</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-
-    @font-face {
-      font-family: 'Zhirok';
-      src: url('fonts/ZHIROK TYPEFACE.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Aron';
-      src: url('fonts/Aron-Light.ttf') format('truetype');
-      font-weight: 300;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Aron';
-      src: url('fonts/Aron-Regular.ttf') format('truetype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Aron';
-      src: url('fonts/Aron-Medium.ttf') format('truetype');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Aron';
-      src: url('fonts/Aron-SemiBold.ttf') format('truetype');
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
     :root {
-      --black: #0e0f0d;
-      --rust: #9a4325;
-      --gold: #f3b95a;
-      --red: #a62a2d;
-      --olive: #47411f;
-      --gray: #a6a5a5;
-      --cream: #f7f3ed;
-      --rust-light: #c4572e;
+      --black: #080a10;
+      --deep-blue: #0a1628;
+      --blue: #1e5fff;
+      --blue-light: #4d8bff;
+      --cyan: #00d4ff;
+      --navy: #0f2347;
+      --gray: #8a9bb5;
+      --white: #edf2fc;
+      --blue-glow: rgba(30, 95, 255, 0.4);
     }
 
     * {
@@ -64,126 +25,25 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       background: var(--black);
-      color: var(--cream);
-      font-family: 'Aron', 'Inter', sans-serif;
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 300;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* ── Typography ── */
     h1, h2, h3 {
-      font-family: 'Zhirok', 'Inter', sans-serif;
-      font-weight: normal;
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
-    h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.95; }
-    h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: 1.5rem; color: var(--gold); }
-    h3 { font-size: 1.1rem; color: var(--cream); }
-
-    p { color: var(--gray); font-size: 1rem; }
-
-    /* ── Layout ── */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    section {
-      padding: 6rem 0;
-    }
-
-    /* ── Scroll Reveal ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(60px);
-      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-left {
-      opacity: 0;
-      transform: translateX(-80px);
-      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal-left.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .reveal-right {
-      opacity: 0;
-      transform: translateX(80px);
-      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal-right.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .reveal-scale {
-      opacity: 0;
-      transform: scale(0.85);
-      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal-scale.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    /* Stagger children */
-    .stagger-children .reveal {
-      transition-delay: calc(var(--i, 0) * 0.12s);
-    }
-
-    /* ── Divider ── */
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--rust), var(--gold), var(--rust), transparent);
-      margin: 0 2rem;
-      opacity: 0.4;
-    }
-
-    .dots-divider {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      padding: 2rem 0;
-      opacity: 0.3;
-    }
-
-    .dots-divider span {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--cream);
-      animation: dotPulse 2s ease-in-out infinite;
-    }
-
-    .dots-divider span:nth-child(odd) {
-      animation-delay: 0.5s;
-    }
-
-    @keyframes dotPulse {
-      0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.4); }
-    }
+    h1 { font-size: clamp(4rem, 12vw, 10rem); line-height: 0.9; }
 
     /* ── Nav ── */
     nav {
@@ -201,18 +61,17 @@
     }
 
     nav.scrolled {
-      background: rgba(14, 15, 13, 0.95);
+      background: rgba(8, 10, 16, 0.95);
       backdrop-filter: blur(10px);
       padding: 1rem 2rem;
     }
 
     .nav-logo {
-      font-family: 'Zhirok', 'Inter', sans-serif;
-      font-weight: normal;
+      font-family: 'Bebas Neue', sans-serif;
       text-transform: uppercase;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       letter-spacing: 0.15em;
-      color: var(--cream);
+      color: var(--white);
     }
 
     .nav-right {
@@ -224,9 +83,9 @@
     .nav-download {
       display: inline-block;
       padding: 0.55rem 1.5rem;
-      background: linear-gradient(135deg, var(--rust), var(--rust-light));
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
       border-radius: 2px;
-      color: var(--cream);
+      color: var(--white);
       text-decoration: none;
       font-size: 0.75rem;
       text-transform: uppercase;
@@ -241,14 +100,12 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, var(--rust-light), var(--gold));
+      background: linear-gradient(135deg, var(--blue-light), var(--cyan));
       opacity: 0;
       transition: opacity 0.4s;
     }
 
-    .nav-download:hover::before {
-      opacity: 1;
-    }
+    .nav-download:hover::before { opacity: 1; }
 
     .nav-download span {
       position: relative;
@@ -257,42 +114,7 @@
 
     .nav-download:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(154, 67, 37, 0.4);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--gray);
-      text-decoration: none;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      transition: color 0.3s;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--gold);
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
+      box-shadow: 0 8px 25px var(--blue-glow);
     }
 
     /* ── Hero ── */
@@ -305,7 +127,7 @@
       overflow: hidden;
     }
 
-    /* Animated gradient background for hero */
+    /* Animated bg */
     #hero::before {
       content: '';
       position: absolute;
@@ -313,8 +135,20 @@
       right: -20%;
       width: 80%;
       height: 150%;
-      background: radial-gradient(ellipse at center, rgba(154, 67, 37, 0.12) 0%, transparent 60%);
+      background: radial-gradient(ellipse at center, rgba(30, 95, 255, 0.1) 0%, transparent 60%);
       animation: heroGlow 8s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.05) 0%, transparent 60%);
+      animation: heroGlow 10s 2s ease-in-out infinite alternate;
       pointer-events: none;
     }
 
@@ -323,7 +157,20 @@
       100% { transform: translate(-5%, 5%) scale(1.1); opacity: 1; }
     }
 
-    /* Floating particles */
+    /* Grid lines bg */
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(30, 95, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 95, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    }
+
+    /* Particles */
     .particles {
       position: absolute;
       inset: 0;
@@ -335,7 +182,7 @@
       position: absolute;
       width: 3px;
       height: 3px;
-      background: var(--gold);
+      background: var(--cyan);
       border-radius: 50%;
       opacity: 0;
       animation: floatUp linear infinite;
@@ -348,6 +195,12 @@
       100% { opacity: 0; transform: translateY(-10vh) scale(1); }
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
     .hero-content {
       display: grid;
       grid-template-columns: 1fr 1.5fr;
@@ -358,15 +211,13 @@
       z-index: 2;
     }
 
-    .hero-text {
-      z-index: 2;
-    }
+    .hero-text { z-index: 2; }
 
     .hero-label {
       font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--rust);
+      letter-spacing: 0.25em;
+      color: var(--cyan);
       margin-bottom: 1.5rem;
       font-weight: 500;
       opacity: 0;
@@ -374,7 +225,7 @@
     }
 
     .hero-name {
-      background: linear-gradient(135deg, var(--gold), var(--rust-light), var(--rust));
+      background: linear-gradient(135deg, var(--white), var(--blue-light), var(--cyan));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -384,17 +235,16 @@
       opacity: 0;
       position: relative;
       cursor: default;
-      transition: text-shadow 0.3s, filter 0.3s;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .hero-name:hover {
-      background: linear-gradient(135deg, var(--black), #1a1a18, var(--black));
+      background: linear-gradient(135deg, var(--black), #0a0e18, var(--black));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      filter: drop-shadow(0 0 0px transparent);
-      paint-order: stroke fill;
-      -webkit-text-stroke: 1.5px var(--gold);
+      -webkit-text-stroke: 2px var(--cyan);
+      filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
     }
 
     @keyframes gradientShift {
@@ -405,11 +255,6 @@
     @keyframes fadeSlideUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeSlideRight {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
     }
 
     .hero-tagline {
@@ -430,6 +275,7 @@
       animation: fadeSlideUp 1s 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
+    /* ── Photo ── */
     .hero-photo-wrapper {
       perspective: 800px;
     }
@@ -447,8 +293,8 @@
 
     .hero-photo:hover {
       box-shadow:
-        0 25px 60px rgba(154, 67, 37, 0.25),
-        0 0 80px rgba(243, 185, 90, 0.08);
+        0 25px 60px rgba(30, 95, 255, 0.2),
+        0 0 80px rgba(0, 212, 255, 0.08);
     }
 
     .hero-photo img {
@@ -462,15 +308,14 @@
 
     .hero-photo:hover img {
       transform: scale(1.06);
-      filter: contrast(1.1) saturate(1.2);
+      filter: contrast(1.1) saturate(1.1) brightness(1.05);
     }
 
-    /* Glowing border on hover */
     .hero-photo-glow {
       position: absolute;
       inset: -2px;
       border-radius: 6px;
-      background: linear-gradient(135deg, var(--gold), var(--rust), var(--red), var(--gold));
+      background: linear-gradient(135deg, var(--cyan), var(--blue), var(--blue-light), var(--cyan));
       background-size: 300% 300%;
       z-index: -1;
       opacity: 0;
@@ -478,16 +323,13 @@
       animation: borderGlow 4s ease-in-out infinite;
     }
 
-    .hero-photo:hover .hero-photo-glow {
-      opacity: 1;
-    }
+    .hero-photo:hover .hero-photo-glow { opacity: 1; }
 
     @keyframes borderGlow {
       0%, 100% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
     }
 
-    /* Shine sweep effect */
     .hero-photo-shine {
       position: absolute;
       inset: 0;
@@ -503,14 +345,7 @@
       left: -60%;
       width: 40%;
       height: 200%;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(243, 185, 90, 0.08),
-        rgba(255, 255, 255, 0.12),
-        rgba(243, 185, 90, 0.08),
-        transparent
-      );
+      background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.06), rgba(255, 255, 255, 0.1), rgba(0, 212, 255, 0.06), transparent);
       transform: skewX(-20deg);
       opacity: 0;
       transition: opacity 0.3s;
@@ -531,37 +366,19 @@
       to { opacity: 1; transform: translateY(0) scale(1); clip-path: inset(0 0 0 0); }
     }
 
-    .hero-photo-inner {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #1a1a18, #2a2520, #1a1510);
-      z-index: 0;
-    }
-
-    .hero-photo img + .hero-photo-inner {
-      z-index: 0;
-    }
-
     .hero-photo::after {
       content: '';
       position: absolute;
       inset: 0;
-      border: 1px solid rgba(154, 67, 37, 0.3);
+      border: 1px solid rgba(30, 95, 255, 0.2);
       border-radius: 4px;
       pointer-events: none;
       z-index: 3;
       transition: border-color 0.4s;
     }
 
-    .hero-photo:hover::after {
-      border-color: transparent;
-    }
+    .hero-photo:hover::after { border-color: transparent; }
 
-    /* Photo overlay gradient */
     .hero-photo::before {
       content: '';
       position: absolute;
@@ -574,397 +391,82 @@
       pointer-events: none;
     }
 
-    /* ── Sawblade floating decoration ── */
-    .sawblade-float {
-      position: absolute;
-      opacity: 0.03;
-      animation: slowSpin 30s linear infinite;
-      pointer-events: none;
-    }
-
-    @keyframes slowSpin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    /* ── Bio ── */
-    .bio-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 4rem;
-      align-items: start;
-      padding: 0 10px;
-    }
-
-    .bio-text p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-    }
-
-    /* ── Sound ── */
-    .sound-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 2rem;
-    }
-
-    .tag {
-      padding: 0.5rem 1.25rem;
-      border: 1px solid var(--rust);
-      border-radius: 2px;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--cream);
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      cursor: default;
-    }
-
-    .tag:hover {
-      background: var(--rust);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(154, 67, 37, 0.3);
-    }
-
-    .sound-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .sound-card {
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 2px;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sound-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--rust), var(--gold));
-      transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .sound-card:hover {
-      border-color: var(--rust);
-      transform: translateY(-4px);
-      background: rgba(154, 67, 37, 0.05);
-    }
-
-    .sound-card:hover::before {
-      width: 100%;
-    }
-
-    .sound-card h3 {
-      margin-bottom: 0.75rem;
-      font-size: 0.9rem;
-    }
-
-    .sound-card p {
-      font-size: 0.9rem;
-      line-height: 1.7;
-    }
-
-    /* ── Music ── */
-    .tracks-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .track-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 2px;
-      padding: 2rem;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .track-card::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 3px;
-      height: 0;
-      background: linear-gradient(to bottom, var(--gold), var(--rust));
-      transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .track-card:hover {
-      border-color: var(--rust);
-      transform: translateX(6px);
-      background: rgba(154, 67, 37, 0.04);
-    }
-
-    .track-card:hover::before {
-      height: 100%;
-    }
-
-    .track-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    .track-title {
-      font-weight: 600;
-      font-style: italic;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .track-duration {
-      font-size: 0.8rem;
-      color: var(--gray);
-      opacity: 0.5;
-    }
-
-    .track-embed {
-      width: 100%;
-      height: 120px;
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gray);
-      opacity: 0.3;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    /* ── Video ── */
-    .video-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-
-    .video-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 2px;
-      overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .video-card:hover {
-      border-color: var(--rust);
-      transform: translateY(-6px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    }
-
-    .video-embed {
-      aspect-ratio: 16/9;
-      background: rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gray);
-      opacity: 0.3;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      position: relative;
-    }
-
-    .play-btn {
-      width: 60px;
-      height: 60px;
-      border: 2px solid var(--cream);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0.3;
-      position: absolute;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .video-card:hover .play-btn {
-      opacity: 0.8;
-      transform: scale(1.15);
-      border-color: var(--gold);
-    }
-
-    .play-btn::after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 10px 0 10px 18px;
-      border-color: transparent transparent transparent var(--cream);
-      margin-left: 4px;
-      transition: border-color 0.3s;
-    }
-
-    .video-card:hover .play-btn::after {
-      border-color: transparent transparent transparent var(--gold);
-    }
-
-    .video-info {
-      padding: 1.25rem;
-    }
-
-    .video-info h3 {
-      font-size: 0.9rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .video-info p {
-      font-size: 0.8rem;
-      opacity: 0.5;
-    }
-
-    /* ── Contact ── */
-    #contact {
-      padding-bottom: 4rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .contact-item {
-      margin-bottom: 2rem;
-    }
-
-    .contact-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--rust);
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-    }
-
-    .contact-value {
-      font-size: 1.1rem;
-      color: var(--cream);
-    }
-
-    .contact-value a {
-      color: var(--cream);
-      text-decoration: none;
-      transition: color 0.3s;
-      position: relative;
-    }
-
-    .contact-value a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--gold);
-      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .contact-value a:hover {
-      color: var(--gold);
-    }
-
-    .contact-value a:hover::after {
-      width: 100%;
-    }
-
-    .contact-cta {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 1rem 2.5rem;
-      background: linear-gradient(135deg, var(--rust), var(--rust-light));
-      color: var(--cream);
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      border-radius: 2px;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-cta::before {
-      content: '';
+    .hero-photo-inner {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, var(--rust-light), var(--gold));
-      opacity: 0;
-      transition: opacity 0.4s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0a0e18, #0f1a2e, #0a1225);
+      z-index: 0;
     }
 
-    .contact-cta:hover::before {
-      opacity: 1;
-    }
-
-    .contact-cta span {
-      position: relative;
-      z-index: 1;
-    }
-
-    .contact-cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(154, 67, 37, 0.4);
-    }
-
-    /* ── Footer ── */
-    footer {
-      padding: 2rem;
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .footer-logo {
-      font-family: 'Zhirok', 'Inter', sans-serif;
-      font-weight: normal;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      letter-spacing: 0.2em;
-      color: var(--gray);
-      opacity: 0.4;
-    }
-
-    .footer-year {
+    .hero-photo-inner span {
       font-size: 0.7rem;
-      color: var(--gray);
-      opacity: 0.3;
-      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      opacity: 0.2;
     }
 
-    /* ── Diagonal lines pattern ── */
-    .diag-pattern {
-      height: 30px;
-      background-image: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 10px,
-        rgba(243, 185, 90, 0.06) 10px,
-        rgba(243, 185, 90, 0.06) 11px
-      );
-      margin: 0 2rem;
+    /* ── Custom cursor ── */
+    .cursor-dot {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: var(--cyan);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s, height 0.3s, background 0.3s, opacity 0.3s;
+      opacity: 0;
+      mix-blend-mode: difference;
     }
 
-    /* ── Glowing line animation ── */
+    .cursor-dot.active { opacity: 1; }
+
+    .cursor-dot.hovering {
+      width: 50px;
+      height: 50px;
+    }
+
+    .cursor-ring {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(0, 212, 255, 0.4);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, opacity 0.3s;
+      opacity: 0;
+    }
+
+    .cursor-ring.active { opacity: 1; }
+
+    .cursor-ring.hovering {
+      width: 80px;
+      height: 80px;
+      border-color: rgba(30, 95, 255, 0.6);
+    }
+
+    .cursor-glow {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(30, 95, 255, 0.07) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s;
+      opacity: 0;
+    }
+
+    .cursor-glow.active { opacity: 1; }
+
+    /* ── Glow line ── */
     .glow-line {
       height: 1px;
       margin: 0 2rem;
@@ -980,7 +482,7 @@
       left: -100%;
       width: 60%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, var(--gold), var(--rust), transparent);
+      background: linear-gradient(90deg, transparent, var(--cyan), var(--blue), transparent);
       animation: glowSlide 4s ease-in-out infinite;
     }
 
@@ -989,79 +491,33 @@
       100% { left: 100%; }
     }
 
-    /* ── Custom cursor ── */
-    .cursor-dot {
-      position: fixed;
-      width: 8px;
-      height: 8px;
-      background: var(--gold);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: width 0.3s, height 0.3s, background 0.3s, opacity 0.3s;
-      opacity: 0;
-      mix-blend-mode: difference;
-    }
-
-    .cursor-dot.active {
-      opacity: 1;
-    }
-
-    .cursor-dot.hovering {
-      width: 50px;
-      height: 50px;
-      background: var(--gold);
-      mix-blend-mode: difference;
-    }
-
-    .cursor-ring {
-      position: fixed;
-      width: 40px;
-      height: 40px;
-      border: 1px solid rgba(243, 185, 90, 0.4);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9998;
-      transform: translate(-50%, -50%);
-      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                  height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.3s,
-                  opacity 0.3s;
-      opacity: 0;
-    }
-
-    .cursor-ring.active {
-      opacity: 1;
-    }
-
-    .cursor-ring.hovering {
-      width: 80px;
-      height: 80px;
-      border-color: rgba(154, 67, 37, 0.6);
-    }
-
-    .cursor-glow {
-      position: fixed;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(154, 67, 37, 0.25) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 0;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.3s;
-      opacity: 0;
-    }
-
-    .cursor-glow.active {
-      opacity: 1;
-    }
-
-    /* ── Magnetic text hover ── */
+    /* ── Magnetic ── */
     .magnetic {
       display: inline-block;
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      color: var(--gray);
+      opacity: 0.4;
+    }
+
+    .footer-year {
+      font-size: 0.7rem;
+      color: var(--gray);
+      opacity: 0.3;
+      margin-top: 0.5rem;
     }
 
     /* ── Mobile ── */
@@ -1077,49 +533,13 @@
         order: -1;
       }
 
-      .bio-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 10px;
-      }
-
-      .sound-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .video-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .nav-download {
-        font-size: 0.65rem;
-        padding: 0.4rem 0.8rem;
-      }
-
-      section {
-        padding: 4rem 0;
-      }
-
-      h1 {
-        font-size: 3rem;
-      }
+      h1 { font-size: 3.5rem; }
 
       .cursor-glow, .cursor-dot, .cursor-ring {
         display: none;
       }
 
-      .particles {
-        display: none;
-      }
+      .particles { display: none; }
     }
   </style>
 </head>
@@ -1132,48 +552,32 @@
 
   <!-- Nav -->
   <nav id="nav">
-    <div class="nav-logo magnetic">Vibranium Records</div>
+    <div class="nav-logo magnetic">Tiesto Records</div>
     <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#bio" class="magnetic">Bio</a></li>
-        <li><a href="#sound" class="magnetic">Sound</a></li>
-        <li><a href="#music" class="magnetic">Music</a></li>
-        <li><a href="#video" class="magnetic">Video</a></li>
-        <li><a href="#contact" class="magnetic">Contact</a></li>
-      </ul>
-      <a href="#" class="nav-download magnetic" download><span>Download Press Kit</span></a>
+      <a href="#" class="nav-download magnetic"><span>Download Press Kit</span></a>
     </div>
   </nav>
 
   <!-- Hero -->
   <section id="hero">
-    <!-- Floating particles -->
+    <div class="grid-bg"></div>
     <div class="particles" id="particles"></div>
-
-    <!-- Sawblade decoration -->
-    <svg class="sawblade-float" style="top: 10%; right: 5%; width: 200px; height: 200px;" viewBox="0 0 100 100">
-      <path d="M50 5 L55 20 Q60 15 65 20 L70 5 Q55 15 50 5Z M70 5 L65 20 Q70 25 70 30 L85 25 Q75 15 70 5Z M85 25 L70 30 Q75 35 75 40 L90 45 Q90 35 85 25Z M90 45 L75 40 Q75 45 75 50 L90 55 Q90 50 90 45Z M90 55 L75 50 Q75 55 70 60 L85 70 Q90 60 90 55Z M85 70 L70 60 Q65 65 60 70 L70 85 Q80 80 85 70Z M70 85 L60 70 Q55 75 50 75 L50 90 Q60 90 70 85Z M50 90 L50 75 Q45 75 40 70 L30 85 Q40 90 50 90Z M30 85 L40 70 Q35 65 30 60 L15 70 Q20 80 30 85Z M15 70 L30 60 Q25 55 25 50 L10 55 Q10 65 15 70Z M10 55 L25 50 Q25 45 25 40 L10 45 Q10 50 10 55Z M10 45 L25 40 Q25 35 30 30 L15 25 Q10 35 10 45Z M15 25 L30 30 Q35 25 40 20 L30 5 Q20 15 15 25Z M30 5 L40 20 Q45 15 50 15 L50 5 Q40 5 30 5Z" fill="var(--cream)" opacity="0.5"/>
-    </svg>
-
-    <svg class="sawblade-float" style="bottom: 10%; left: -3%; width: 150px; height: 150px; animation-direction: reverse;" viewBox="0 0 100 100">
-      <path d="M50 5 L55 20 Q60 15 65 20 L70 5 Q55 15 50 5Z M70 5 L65 20 Q70 25 70 30 L85 25 Q75 15 70 5Z M85 25 L70 30 Q75 35 75 40 L90 45 Q90 35 85 25Z M90 45 L75 40 Q75 45 75 50 L90 55 Q90 50 90 45Z M90 55 L75 50 Q75 55 70 60 L85 70 Q90 60 90 55Z M85 70 L70 60 Q65 65 60 70 L70 85 Q80 80 85 70Z M70 85 L60 70 Q55 75 50 75 L50 90 Q60 90 70 85Z M50 90 L50 75 Q45 75 40 70 L30 85 Q40 90 50 90Z M30 85 L40 70 Q35 65 30 60 L15 70 Q20 80 30 85Z M15 70 L30 60 Q25 55 25 50 L10 55 Q10 65 15 70Z M10 55 L25 50 Q25 45 25 40 L10 45 Q10 50 10 55Z M10 45 L25 40 Q25 35 30 30 L15 25 Q10 35 10 45Z M15 25 L30 30 Q35 25 40 20 L30 5 Q20 15 15 25Z M30 5 L40 20 Q45 15 50 15 L50 5 Q40 5 30 5Z" fill="var(--cream)" opacity="0.5"/>
-    </svg>
 
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <div class="hero-label">Vibranium Records Presents</div>
-          <h1 class="hero-name magnetic">FI.WAV</h1>
-          <p class="hero-tagline">DJ / Producer blending Amapiano, Jazz & House into a mellow, groovy journey</p>
+          <div class="hero-label">Tiesto Records Presents</div>
+          <h1 class="hero-name magnetic">TIESTO</h1>
+          <p class="hero-tagline">DJ / Producer pushing the boundaries of Progressive House, Trance & Electronic Music</p>
           <p class="hero-location">Based in [City, Country]</p>
         </div>
         <div class="hero-photo-wrapper">
           <div class="hero-photo" id="heroPhoto">
             <div class="hero-photo-glow"></div>
-            <img src="img/dj-hero.jpg" alt="FI.WAV — DJ & Producer" />
+            <img src="img/dj-hero.jpg" alt="TIESTO — DJ & Producer" />
             <div class="hero-photo-shine"></div>
             <div class="hero-photo-inner">
-              <span style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.15em; opacity:0.2">Artist Photo</span>
+              <span>Artist Photo</span>
             </div>
           </div>
         </div>
@@ -1183,238 +587,40 @@
 
   <div class="glow-line"></div>
 
-  <!-- Bio -->
-  <section id="bio">
-    <div class="container">
-      <div class="bio-grid">
-        <div class="reveal-left">
-          <h2>About</h2>
-        </div>
-        <div class="bio-text reveal-right">
-          <p>
-            FI.WAV is a DJ and producer working at the intersection of amapiano, jazz, and house music.
-            Rooted in deep grooves and rich harmonic textures, his sound bridges the warmth of acoustic
-            instrumentation with the pulse of electronic production.
-          </p>
-          <br>
-          <p>
-            His sets are defined by a mellow, immersive atmosphere &mdash; smooth jazz melodies drifting
-            into the deep, rolling grooves of amapiano and house. A laidback, groovy journey perfect
-            for late-night vibes, easy mornings, and everything in between.
-          </p>
-          <br>
-          <p>
-            As the flagship artist of Vibranium Records, FI.WAV represents the label's vision of
-            culturally rich, sonically adventurous music that connects across borders.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="dots-divider">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-
-  <!-- Sound & Style -->
-  <section id="sound">
-    <div class="container">
-      <h2 class="reveal">Sound & Style</h2>
-      <div class="sound-tags reveal stagger-children">
-        <span class="tag" style="--i:0">Amapiano</span>
-        <span class="tag" style="--i:1">Jazz</span>
-        <span class="tag" style="--i:2">Deep House</span>
-        <span class="tag" style="--i:3">Indie Dance</span>
-        <span class="tag" style="--i:4">Groovy</span>
-      </div>
-      <div class="sound-grid">
-        <div class="sound-card reveal" style="transition-delay: 0.1s">
-          <h3>Mood</h3>
-          <p>Hypnotic grooves, warm atmosphere, and smooth melodic progression. A mellow blend where jazz meets the dancefloor.</p>
-        </div>
-        <div class="sound-card reveal" style="transition-delay: 0.2s">
-          <h3>Performance</h3>
-          <p>DJ sets ranging from 1 to 4 hours. Suitable for club nights, rooftop events, curated gatherings, and brand experiences.</p>
-        </div>
-        <div class="sound-card reveal" style="transition-delay: 0.3s">
-          <h3>Influences</h3>
-          <p>African rhythmic traditions, jazz harmony, electronic production. A sonic palette rooted in cultural depth and modern energy.</p>
-        </div>
-        <div class="sound-card reveal" style="transition-delay: 0.4s">
-          <h3>Venues</h3>
-          <p>Intimate clubs, outdoor festivals, art spaces, boutique events. Wherever atmosphere and groove matter most.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="diag-pattern"></div>
-
-  <!-- Music -->
-  <section id="music">
-    <div class="container">
-      <h2 class="reveal">Listen</h2>
-      <div class="tracks-list">
-        <div class="track-card reveal" style="transition-delay: 0.1s">
-          <div class="track-header">
-            <span class="track-title">JazzzApiano &mdash; Main Mix</span>
-            <span class="track-duration">58:32</span>
-          </div>
-          <div class="track-embed">
-            <!-- Replace with: <iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=YOUR_TRACK_URL&color=%239a4325&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe> -->
-            SoundCloud Embed &mdash; Main Mix
-          </div>
-        </div>
-        <div class="track-card reveal" style="transition-delay: 0.2s">
-          <div class="track-header">
-            <span class="track-title">Late Night Grooves Vol. 1</span>
-            <span class="track-duration">1:12:45</span>
-          </div>
-          <div class="track-embed">
-            SoundCloud Embed &mdash; Set 1
-          </div>
-        </div>
-        <div class="track-card reveal" style="transition-delay: 0.3s">
-          <div class="track-header">
-            <span class="track-title">Sunrise Session</span>
-            <span class="track-duration">45:20</span>
-          </div>
-          <div class="track-embed">
-            SoundCloud Embed &mdash; Set 2
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="glow-line"></div>
-
-  <!-- Video -->
-  <section id="video">
-    <div class="container">
-      <h2 class="reveal">Watch</h2>
-      <div class="video-grid">
-        <div class="video-card reveal-scale" style="transition-delay: 0.1s">
-          <div class="video-embed">
-            <div class="play-btn"></div>
-          </div>
-          <div class="video-info">
-            <h3>Live at [Venue Name]</h3>
-            <p>Full performance, 2025</p>
-          </div>
-        </div>
-        <div class="video-card reveal-scale" style="transition-delay: 0.3s">
-          <div class="video-embed">
-            <div class="play-btn"></div>
-          </div>
-          <div class="video-info">
-            <h3>Studio Session</h3>
-            <p>Behind the scenes</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="dots-divider">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="reveal-left">
-          <h2>Booking & Contact</h2>
-          <p>For bookings, collaborations, and press inquiries.</p>
-          <a href="mailto:booking@vibraniumrecords.com" class="contact-cta"><span>Get in Touch</span></a>
-        </div>
-        <div class="reveal-right">
-          <div class="contact-item">
-            <div class="contact-label">Booking Email</div>
-            <div class="contact-value"><a href="mailto:booking@vibraniumrecords.com">booking@vibraniumrecords.com</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-label">Telegram</div>
-            <div class="contact-value"><a href="#">@fiwav</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-label">Instagram</div>
-            <div class="contact-value"><a href="#">@fi.wav</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-label">Phone</div>
-            <div class="contact-value"><a href="tel:+0000000000">+0 (000) 000-00-00</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
-    <div class="footer-logo">Vibranium Records</div>
+    <div class="footer-logo">Tiesto Records</div>
     <div class="footer-year">Est. 2025</div>
   </footer>
 
   <script>
-    // ── Scroll Reveal ──
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // ── Nav scroll effect ──
+    // ── Nav scroll ──
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
-    // ── Smooth anchor scroll ──
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      });
     });
 
     // ── Custom cursor ──
     const cursorDot = document.getElementById('cursorDot');
     const cursorRing = document.getElementById('cursorRing');
     const glow = document.getElementById('cursorGlow');
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
-    let cursorActive = false;
+    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0, cursorActive = false;
 
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-
       if (!cursorActive) {
         cursorDot.classList.add('active');
         cursorRing.classList.add('active');
         glow.classList.add('active');
         cursorActive = true;
       }
-
       cursorDot.style.left = mouseX + 'px';
       cursorDot.style.top = mouseY + 'px';
       glow.style.left = mouseX + 'px';
       glow.style.top = mouseY + 'px';
     });
 
-    // Smooth ring follow
     function animateRing() {
       ringX += (mouseX - ringX) * 0.15;
       ringY += (mouseY - ringY) * 0.15;
@@ -1431,9 +637,7 @@
       cursorActive = false;
     });
 
-    // Hover detection for interactive elements
-    const hoverTargets = document.querySelectorAll('a, button, .tag, .track-card, .video-card, .sound-card, .contact-cta, .nav-download');
-    hoverTargets.forEach(el => {
+    document.querySelectorAll('a, button, .nav-download').forEach(el => {
       el.addEventListener('mouseenter', () => {
         cursorDot.classList.add('hovering');
         cursorRing.classList.add('hovering');
@@ -1444,9 +648,9 @@
       });
     });
 
-    // ── Floating particles ──
+    // ── Particles ──
     const particlesContainer = document.getElementById('particles');
-    function createParticle() {
+    for (let i = 0; i < 20; i++) {
       const p = document.createElement('div');
       p.className = 'particle';
       p.style.left = Math.random() * 100 + '%';
@@ -1456,9 +660,23 @@
       p.style.height = p.style.width;
       particlesContainer.appendChild(p);
     }
-    for (let i = 0; i < 20; i++) createParticle();
 
-    // ── Magnetic hover on elements ──
+    // ── 3D tilt on hero photo ──
+    const heroPhoto = document.getElementById('heroPhoto');
+    const heroWrapper = document.querySelector('.hero-photo-wrapper');
+
+    heroWrapper.addEventListener('mousemove', (e) => {
+      const rect = heroWrapper.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      heroPhoto.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg)`;
+    });
+
+    heroWrapper.addEventListener('mouseleave', () => {
+      heroPhoto.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    });
+
+    // ── Magnetic ──
     document.querySelectorAll('.magnetic').forEach(el => {
       el.addEventListener('mousemove', (e) => {
         const rect = el.getBoundingClientRect();
@@ -1471,23 +689,7 @@
       });
     });
 
-    // ── 3D tilt on hero photo ──
-    const heroPhoto = document.getElementById('heroPhoto');
-    const heroWrapper = document.querySelector('.hero-photo-wrapper');
-
-    heroWrapper.addEventListener('mousemove', (e) => {
-      const rect = heroWrapper.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-      heroPhoto.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg)`;
-    });
-
-    heroWrapper.addEventListener('mouseleave', () => {
-      heroPhoto.style.transform = 'rotateY(0deg) rotateX(0deg)';
-    });
-
-    // ── Parallax on scroll ──
+    // ── Parallax ──
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       if (scrollY < window.innerHeight && heroWrapper) {
